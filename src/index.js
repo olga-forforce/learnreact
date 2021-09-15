@@ -1,10 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hello from './Hello';
+import MainPage from './pages/main';
+
+function App(){
+    return (
+        <div>
+            <MainPage />
+        </div>
+    )
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Hello name="Olha" sername="Pererva" />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode><App /></React.StrictMode>,
+    document.getElementById('root')
 );
