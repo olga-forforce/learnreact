@@ -1,6 +1,5 @@
 import './header.css';
 
-
 function Header({isLogin, onLogOut, onLogin}) {
     return (
         <header className="header">

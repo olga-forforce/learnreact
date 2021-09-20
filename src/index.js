@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import Header from "./components/Header/Header";
 import Search from "./components/Search/Search";
-import Clock from "./components/Search/Search";
+import Clock from "./components/Clock/Clock";
 
 const App = function () {
     const [isLogin, setIsLogin] = useState(false);
@@ -22,8 +22,9 @@ const App = function () {
 
 
 ReactDOM.render(
-    <React.StrictMode><App/>
-    <Clock date={new Date()} />
-    </React.StrictMode>,
+    <>
+        <App/>
+        <Clock date={new Date()} />
+    </>,
     document.getElementById('root')
 );
