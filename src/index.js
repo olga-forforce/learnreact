@@ -14,8 +14,7 @@ const App = function () {
     };
 
     return <>
-        <Header isLogin={isLogin} onLogOut={onLogOut}/>
-        {!isLogin && <button onClick={onLogin}>Войти</button>}
+        <Header isLogin={isLogin} onLogOut={onLogOut} onLogin={onLogin}/>
         <Search/>
     </>
 }

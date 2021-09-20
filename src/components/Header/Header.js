@@ -1,25 +1,24 @@
 import './header.css';
 
 
-function Header({ isLogin, onLogOut }) {
-        return (
-            <header className="header">
-                <div className="container">
-                    <div className="logo"></div>
-                    <div className="name">Booking</div>
-                    <div>
-                        <button>About</button>
-                        <button>My Booking</button>
-                        {isLogin && (
-                            <>
+function Header({isLogin, onLogOut, onLogin}) {
+    return (
+        <header className="header">
+            <div className="container">
+                <div className="logo"></div>
+                <div className="name">Booking</div>
+                <div>
+                    <button>About</button>
+                    <button>My Booking</button>
+                    {!isLogin ? <button onClick={onLogin}>Войти</button> : (
+                        <>
                             <p>Ольга</p>
-                            <button onClick={onLogOut} >Выход</button>
-                            </>)
-                        }
-                    </div>
+                            <button onClick={onLogOut}>Выход</button>
+                        </>)}
                 </div>
-            </header>
-        );
+            </div>
+        </header>
+    );
 }
 
 export default Header;
