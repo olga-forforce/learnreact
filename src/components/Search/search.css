@@ -2,3 +2,35 @@
     width: 100%;
     background: blueviolet;
 }
+.styled-select {
+    background: transparent;
+    position:relative;
+    width: 268px;
+    margin-top: 9px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 34px;
+    color: #000;
+    outline: none;
+}
+.styled-select::after {
+    content : " ";
+    display:block;
+    height  : 1px;
+    width: 268px;
+    border-bottom: 1px dashed #000;
+}
+.input {
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+.input:focus {
+    outline: none;
+}
