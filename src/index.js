@@ -1,30 +1,35 @@
-import React, {useState} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from "./components/Header/Header";
-import Search from "./components/Search/Search";
-import Clock from "./components/Clock/Clock";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+//Pages
+import Main from "./pages/Main";
+import Hotels from "./pages/Hotels";
 
-const App = function () {
-    const [isLogin, setIsLogin] = useState(false);
-
-    const onLogin = () => {
-        setIsLogin(true)
-    };
-    const onLogOut = () => {
-        setIsLogin(false)
-    };
-
-    return <>
-        <Header isLogin={isLogin} onLogOut={onLogOut} onLogin={onLogin}/>
-        <Search/>
-    </>
-}
 
 
 ReactDOM.render(
-    <>
-        <App/>
-        <Clock date={new Date()} />
-    </>,
+    <div>
+        <Router>
+            <div>
+                <Link to="/main">Main</Link><br/>
+                <Link to="/hotels">Hotels</Link>
+                <Switch>
+                    <Route path="/main">
+                        <Main />
+                    </Route>
+                    <Route path="/hotels">
+                        <Hotels />
+                    </Route>
+
+                </Switch>
+
+            </div>
+        </Router>
+    </div>,
     document.getElementById('root')
 );

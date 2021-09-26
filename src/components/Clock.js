@@ -14,9 +14,13 @@ class Clock extends Component{
 
     render() {
         return (
+            <>
             <div className="App">
                 <h2>Now {this.state.date.toLocaleTimeString()}</h2>
             </div>
+                <a><img src="../images/108158425.jpg" width="50"
+                        height="50" alt="Пример"></img></a>
+            </>
         )
     }
 }
