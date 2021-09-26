@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import img from '../images/108158425.jpg';
+import img2 from '../images/296371558.jpg';
 
 class Clock extends Component{
     constructor(props) {
@@ -18,8 +20,10 @@ class Clock extends Component{
             <div className="App">
                 <h2>Now {this.state.date.toLocaleTimeString()}</h2>
             </div>
-                <a><img src="../images/108158425.jpg" width="50"
-                        height="50" alt="Пример"></img></a>
+                <img src={img} width="500"
+                        height="500" alt="Hotel"/>
+                <img src={img2} width="500"
+                     height="500" alt="Hotel2"/>
             </>
         )
     }
